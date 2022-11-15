@@ -19,8 +19,15 @@ namespace Homework11
 
         public string Root()
         {
-            double x = (-b / k);
-            return $"x = {x}";
+            if (k == 0 && b == 0)
+            { return "x - любое"; }
+            else if (k == 0 && b != 0)
+            { return "Решений нет"; }
+            else
+            {
+                double x = (-b / k);
+                return $"x = {x}";
+            }
         }
     }
 }
